@@ -32,11 +32,11 @@ apt install -y git python3 ffmpeg libpq-dev
 ```
 - Clone this git repository.
 ```sh 
-git clone https://github.com/Xiefengshang/google-drive-telegram-bot
+git clone https://github.com/Xiefengshang/tgtogd
 ```
 - Change Directory
 ```sh 
-cd google-drive-telegram-bot
+cd tgtogd
 ```
 - Install requirements with pip3
 ```sh 
