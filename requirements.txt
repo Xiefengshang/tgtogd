@@ -1,0 +1,10 @@
+aiohttp==3.8.4
+google_api_python_client==2.82.0
+httplib2==0.21.0
+oauth2client==4.1.3
+Pyrogram==2.0.102
+pySmartDL==1.3.4
+SQLAlchemy==1.3.20
+tenacity==8.2.2
+wget==3.2
+yt_dlp==2023.3.4
