@@ -6,7 +6,7 @@
 - [X] 将`ytdl`更新为`yt-dlp`
 - [X] 修改为`sqlite`模式而非`postgresql` ~~本来最开始想改成本地json,但懒得改sql请求就算了~~
 - [X] 修改为`async`异步，~~理论提升性能~~
-- [X] 下载文件名修改为`时间+文件名`,以解决同名文件下载的问题。
+- [X] `Telegram`下载文件名修改为`时间+文件名`,以解决同名文件下载的问题。
 ## 参数
 - `BOT_TOKEN` - Get it by contacting to [BotFather](https://t.me/botfather)
 - `APP_ID` - Get it by creating app on [my.telegram.org](https://my.telegram.org/apps)
