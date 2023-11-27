@@ -7,6 +7,7 @@
 - [X] 修改为`sqlite`模式而非`postgresql` ~~本来最开始想改成本地json,但懒得改sql请求就算了~~
 - [X] 修改为`async`异步，~~理论提升性能~~
 - [X] `Telegram`下载文件名修改为`时间+文件名`,以解决同名文件下载的问题。
+- [X] 更新认证方式，从`urn:ietf:wg:oauth:2.0:oob`更新为`localhost` 模式
 ## 参数
 - `BOT_TOKEN` - 与 [BotFather](https://t.me/botfather) 聊天获得(
 - `APP_ID` - 请在 [my.telegram.org](https://my.telegram.org/apps) 上创建APP获得
@@ -17,10 +18,11 @@
 - `DOWNLOAD_DIRECTORY` - 下载文件的位置,相对绝对路径皆可. 必须以`/`结尾. (默认为 `./downloads/`)
 - `MAX_TASKS` - 最大同时下载`Telegram`文件的数量,默认为4,不建议大于4
 ## Bot命令支持：
-`/auth` : 进行`Googled Drive`的验证,需要在填入`ClientID`和`ClientSecret`之后运行，访问`auth url`之后将`code`直接发送给`Bot`即可完成验证;  
+`/auth` : 进行`Googled Drive`的验证,需要在填入`ClientID`和`ClientSecret`之后运行，访问`auth url`之后将`http://localhost/?code=`的认证`url`直接发送给`Bot`即可完成验证;  
 `/revoke`: 取消`Google Drive`认证  
 `/setfolder`: 设置`Google Drive`上传文件夹目录,直接发送例如:`/setfolder https://drive.google.com/drive/folders/*`即可;  
-`/ytdl`: 使用`yt-dlp`进行视频等下载,发送如:`/ytdl https://www.youtube.com/****`即可;
+`/ytdl`: 使用`yt-dlp`进行视频等下载,发送如:`/ytdl https://www.youtube.com/****`即可;  
+`/emptytrash`：清空`google drive`垃圾箱
 ## 其他功能:
 ### 上传Telegram Files到Google Drive
 直接转发文件给`Bot`即可, 同时下载参数为`MAX_TASKS`, 不建议大于`4`, 可能会触发`Flood_wait`.
