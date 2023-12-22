@@ -29,6 +29,20 @@
 ### 下载普通链接到Google Drive
 直接发送链接即可.
 ## 安装(照抄原版)
+### Configuration
+**There are two Ways for configuring this bot.**
+1. Add values to Environment Variables. And add a `ENV` var to Anything to enable it.
+2. Add values in [config.py](./bot/config.py). And make sure that no `ENV` environment variables existing.
+
+### Configuration Values
+- `BOT_TOKEN` - Get it by contacting to [BotFather](https://t.me/botfather)
+- `APP_ID` - Get it by creating app on [my.telegram.org](https://my.telegram.org/apps)
+- `API_HASH` - Get it by creating app on [my.telegram.org](https://my.telegram.org/apps)
+- `SUDO_USERS` - List of Telegram User ID of sudo users, seperated by space.
+- `SUPPORT_CHAT_LINK` - Telegram invite link of support chat.
+- `DATABASE_URL` - Postgres database url.
+- `DOWNLOAD_DIRECTORY` - Custom path for downloads. Must end with a forward `/` slash. (Default to `./downloads/`)
+
 - Install required modules.
 ```sh
 apt install -y git python3 ffmpeg libpq-dev
@@ -44,3 +58,12 @@ cd tgtogd
 - Install requirements with pip3
 ```sh 
 pip3 install -r requirements.txt
+### Deploy
+After modifying your config
+```sh 
+python3 -m bot
+```
+## Credits
+- [Dan](https://github.com/delivrance) for creating [PyroGram](https://pyrogram.org)
+- [Spechide](https://github.com/Spechide) for [gDriveDB.py](./bot/helpers/sql_helper/gDriveDB.py)
+- [Shivam Jha](https://github.com/lzzy12) for [Clone Feature](./bot/helpers/gdrive_utils/gDrive.py) from [python-aria-mirror-bot](https://github.com/lzzy12/python-aria-mirror-bot)
