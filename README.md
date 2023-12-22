@@ -58,6 +58,7 @@ cd tgtogd
 - Install requirements with pip3
 ```sh 
 pip3 install -r requirements.txt
+```
 ### Deploy
 After modifying your config
 ```sh 
