@@ -66,7 +66,7 @@ async def _telegram_file(client, message):
     await sent_message.edit(Messages.DOWNLOAD_TG_FILE.format(file.file_name, humanbytes(file.file_size), file.mime_type))
     LOGGER.info(f'Download:{user_id}: {file.file_id}')
     try:
-        file_path = await message.download(file_name=DOWNLOAD_DIRECTORY+str(file.date)+file.file_name)
+        file_path = await message.download(file_name=DOWNLOAD_DIRECTORY+str(file.date)+(file.file_name or ""))
         await sent_message.edit(Messages.DOWNLOADED_SUCCESSFULLY.format(os.path.basename(file_path), humanbytes(os.path.getsize(file_path))))
         msg = await GoogleDrive(user_id).upload_file(file_path, file.mime_type)
         await sent_message.edit(msg)
