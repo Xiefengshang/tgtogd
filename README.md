@@ -45,7 +45,7 @@
 
 - Install required modules.
 ```sh
-apt install -y git python3 ffmpeg libpq-dev
+apt install -y git python3 ffmpeg libpq-dev python3-pip
 ```
 - Clone this git repository.
 ```sh 
